@@ -1,0 +1,53 @@
+
+//variables
+
+$color-main: #085eff;
+
+
+
+@mixin styleButton {
+    padding: 10px 15px;
+    border: none;
+    outline: 1px solid #085eff;
+    color: #085eff;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    &:hover{
+        background: linear-gradient(100deg, #6998ee, #085eff);
+        color: white;
+        outline: none;
+        transform: translateY(-2px);
+    }
+    
+    &:disabled{
+        cursor: not-allowed;
+        background: rgba(255, 0, 0, 0.200);
+        color: white;
+        outline: none;
+        transform: translateY(0px);
+    }
+}
+
+
+@mixin styleButtonFormat {
+    padding: 10px 15px;
+    border: none;
+    outline: 1px solid #2D728F;
+    color: #2D728F;
+    border-radius: 3px;
+    width: 250px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    background-color: transparent;
+    
+    &:disabled{
+        cursor: not-allowed;
+        background: rgba(255, 0, 0, 0.200);
+        color: white;
+        outline: none;
+        transform: translateY(0px);
+    }
+}

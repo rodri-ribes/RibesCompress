@@ -1,0 +1,96 @@
+
+@import '../../style/style.scss';
+
+.container{
+    position: absolute;
+    left: 2rem;
+    top: 2rem;
+    width: 350px;
+    height: auto;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    box-shadow: 0 5px 10px rgb(0, 0, 0, 0.500);
+    h4{
+        font-family: "Mooli", sans-serif;
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    hr{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    i{
+        color: gray;
+    }
+
+    .container_description{
+        margin-top: 1rem;
+    }
+
+    .container_delete{
+        border: none;
+        background-color: rgb(200, 200, 200, 0.500);
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+        cursor: pointer;
+        z-index: 10;
+        i{
+            font-size: 1rem;
+        }
+    }
+
+    .container__range{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: .5rem;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1rem;
+        margin-bottom: .5rem;
+        
+        input{
+            width: 80%;
+            position: relative;
+            z-index: 10;
+        }
+
+        b{
+            margin-left: .5rem;
+            font-size: 1.5rem;
+        }
+    }
+    
+
+    .container__output{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 1rem;
+
+        button{
+            @include styleButtonFormat;
+            margin-left: 1rem;
+            width: 70px;
+        }
+    }
+}
+
+@media screen and (max-width: 968px){
+    .container{
+        position:relative;
+        left: 0;
+        top: 0;
+        width: 90%;
+        margin: 1rem auto;
+    
+      
+    }
+}

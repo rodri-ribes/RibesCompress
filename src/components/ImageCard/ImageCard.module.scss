@@ -1,0 +1,154 @@
+.container{
+    min-width: 230px;
+    height: 250px;
+    height: 90%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+
+    .container__delete{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: none;
+        background-color: rgb(255, 255, 255,0.500);
+        box-shadow: 0 0 10px rgb(0, 0, 0,0.500);
+        border-radius: 50%;
+        right: .5rem;
+        top: .5rem;
+        cursor: pointer;
+        opacity: 0;
+        transition: all 300ms;
+        
+        i{
+            color: black;
+            font-size: 1.1rem;
+            transition: all 300ms;
+        }
+
+        &:hover{
+            background-color: white;
+        }
+    }
+
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        // object-position: 0 0;
+    }
+
+    @keyframes porcentageAnimation {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.2);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
+    .container__data{
+        position: absolute;
+        background-color: blue;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        opacity: .5;
+
+        p{
+            color: white;
+            font-size: 1rem;
+        }
+
+        animation-name: porcentageAnimation;
+        animation-iteration-count: infinite;
+        animation-duration: 800ms;
+        animation-direction: alternate-reverse;
+    }
+
+    .container__information{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        background-color: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        bottom: -5rem;
+        padding: .5rem;
+
+        .container__information_download{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            right: .5rem;
+            background-color: transparent;
+            width: 40px;
+            height: 40px;
+            border-radius: 50px;
+            color: black;
+            cursor: pointer;
+            border: none;
+            transition: all 300ms;
+            font-size: 1.5rem;
+        }
+    }
+
+    &:hover{
+        .container__delete{
+            opacity: 1;
+        }
+
+        @keyframes animationInfo {
+            0%{
+                bottom: -5rem;
+            }
+            100%{
+                bottom: 0rem;
+            }
+        }
+
+        .container__information{
+            animation-name: animationInfo;
+            animation-duration: 800ms;
+            animation-iteration-count: 1;
+            animation-fill-mode: both;
+            animation-direction: normal;
+        }
+    }
+}
+
+@media screen and (max-width: 968px){
+    .container{
+        .container__delete{
+            opacity: 1;
+
+        }
+
+        .container__information{
+            bottom: 0;
+        }
+
+        &:hover{
+            .container__information{
+                animation-name: none;
+              
+            }
+        }
+    }
+}
